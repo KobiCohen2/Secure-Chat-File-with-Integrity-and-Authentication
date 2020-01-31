@@ -1,0 +1,26 @@
+{
+  "password": "qwertyuiqwertyui",
+  "macPassword": "hello",
+  "authPassword": "auth1",
+  "authServerIp": "10.0.201.19",
+  "authServerPort": "5000",
+  "ip": "10.0.201.12",
+  "port": "4200",
+  "neighbors": [
+    {
+      "name": "neighbor1",
+      "ip": "10.0.201.13",
+      "port": "4201"
+    },
+    {
+      "name": "neighbor2",
+      "ip": "10.0.201.14",
+      "port": "4202"
+    },
+    {
+      "name": "neighbor3",
+      "ip": "10.0.201.15",
+      "port": "4203"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "ip": "10.0.201.19",
+  "port": "5000",
+  "spPassword": "qwertyuiqwertyui",
+  "macPassword": "hello",
+  "users": {
+    "Alice": {
+      "name": "Alice",
+      "ip": "10.0.201.12",
+      "port": "4200",
+      "password": "auth1"
+    },
+    "Bob": {
+      "name": "Bob",
+      "ip": "10.0.201.13",
+      "port": "4201",
+      "password": "auth2"
+    },
+    "Claire": {
+      "name": "Claire",
+      "ip": "10.0.201.14",
+      "port": "4202",
+      "password": "auth3"
+    },
+	 "Dan": {
+      "name": "Dan",
+      "ip": "10.0.201.15",
+      "port": "4202",
+      "password": "auth4"
+    }
+  }
+}

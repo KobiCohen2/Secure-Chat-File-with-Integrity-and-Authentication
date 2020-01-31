@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="766.0" prefWidth="1235.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kinneret.scaftia.ui.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="521.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+   </rowConstraints>
+   <children>
+      <Pane maxHeight="-Infinity" prefHeight="760.0" prefWidth="1205.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TextArea fx:id="tbChat" editable="false" layoutX="22.0" layoutY="161.0" prefHeight="379.0" prefWidth="519.0" />
+            <TextField fx:id="tbSend" layoutX="22.0" layoutY="552.0" onAction="#send" prefHeight="52.0" prefWidth="449.0" />
+            <Button fx:id="btnSend" layoutX="478.0" layoutY="552.0" mnemonicParsing="false" onAction="#send" prefHeight="52.0" prefWidth="63.0" text="Send" />
+            <ListView fx:id="lvNeighbors" layoutX="573.0" layoutY="161.0" prefHeight="379.0" prefWidth="267.0" />
+            <Label layoutX="573.0" layoutY="132.0" text="Connected Neighbors">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="btnConnect" layoutX="1032.0" layoutY="552.0" mnemonicParsing="false" onAction="#connect" prefHeight="52.0" prefWidth="143.0" text="Connect" />
+            <Button fx:id="btnDisconnect" layoutX="874.0" layoutY="552.0" mnemonicParsing="false" onAction="#disconnect" prefHeight="52.0" prefWidth="143.0" text="Disconnect" />
+            <Button fx:id="btnLoad" layoutX="874.0" layoutY="123.0" mnemonicParsing="false" onAction="#loadConfigurationFile" prefHeight="35.0" prefWidth="82.0" text="Load" />
+            <Button fx:id="btnEdit" layoutX="983.0" layoutY="123.0" mnemonicParsing="false" onAction="#editConfiguration" prefHeight="35.0" prefWidth="82.0" text="Edit" />
+            <Label layoutX="874.0" layoutY="96.0" text="Configuration File">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSave" layoutX="1093.0" layoutY="124.0" mnemonicParsing="false" onAction="#saveConfiguration" prefHeight="35.0" prefWidth="82.0" text="Save" />
+            <Label layoutX="254.0" layoutY="14.0" text="Secure Chat and File Transfer With Integrity &amp; Authentication">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="83.0" text="User Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tbUserName" layoutX="101.0" layoutY="81.0" prefHeight="25.0" prefWidth="176.0" />
+            <Label layoutX="22.0" layoutY="130.0" text="Chat">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSendFile" layoutX="573.0" layoutY="552.0" mnemonicParsing="false" onAction="#sendFile" prefHeight="52.0" prefWidth="267.0" text="Send a file" />
+            <TextArea fx:id="taConf" editable="false" layoutX="873.0" layoutY="161.0" prefHeight="379.0" prefWidth="302.0" />
+            <Label fx:id="lblListening" layoutX="288.0" layoutY="85.0" text="Label" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="555.0" layoutY="130.0" orientation="VERTICAL" prefHeight="477.0" prefWidth="6.0" />
+            <Separator layoutX="855.0" layoutY="126.0" orientation="VERTICAL" prefHeight="477.0" prefWidth="6.0" />
+            <Label layoutX="25.0" layoutY="641.0" text="Attacks">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <TextField fx:id="tbRequestorName" layoutX="24.0" layoutY="709.0" prefHeight="35.0" prefWidth="154.0" />
+            <Label layoutX="24.0" layoutY="679.0" text="requestor name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tbReceiverName" layoutX="200.0" layoutY="709.0" prefHeight="35.0" prefWidth="154.0" />
+            <Label layoutX="200.0" layoutY="681.0" text="receiver name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tbTokenWrongUser" layoutX="373.0" layoutY="709.0" prefHeight="35.0" prefWidth="183.0" />
+            <Label layoutX="373.0" layoutY="679.0" text="send token to wrong user">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rbtRandomToken" layoutX="597.0" layoutY="718.0" mnemonicParsing="false" text="send random token" />
+            <RadioButton fx:id="rbtWrongKeyNonce" layoutX="597.0" layoutY="683.0" mnemonicParsing="false" text="encrypt nonce with wrong key" />
+            <RadioButton fx:id="rbtWrongKeyResponse" layoutX="817.0" layoutY="684.0" mnemonicParsing="false" text="encrypt response with wrong key" />
+            <RadioButton fx:id="rbtWrongNumericalResponse" layoutX="1032.0" layoutY="684.0" mnemonicParsing="false" text="wrong numerical response" />
+            <RadioButton fx:id="rbtWrongKeyFile" layoutX="817.0" layoutY="718.0" mnemonicParsing="false" text="encrypt file with wrong key" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
